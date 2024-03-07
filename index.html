@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen JS REC 03/2024</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body id="cos" class="container-fluid">
+
+    <header id="header" class="">
+        <div>
+            <img src="./img/esliceu.jpg" alt="logo" title="Logo Es Liceu">
+        </div>
+        <div>
+            <span id="titol">Aplicacions Web - Examen REC Bootstrap i JS - 07/03/2024</span>
+        </div>
+    </header>
+
+    <main id="principal" name="principal" class="">
+        <ol>
+            <li>
+                <p class="enunciat">Classes Bootstrap (15 punts)</p>
+                <p class="subEnunciat">Heu de posar l'enllaç i les classes Bootstrap per:</p>
+                <ul class="explicacio">
+                    <li>Header: centrat, amb marge top, texte gran</li>
+                    <li>Main: padding i margin, border blau, ben redondejat</li>
+                    <li>Botons: Classes de botons i amb colors diferenciats</li>
+                </ul>
+            </li>
+            <li>
+                <p class="enunciat">Taules de multiplicar (25 punts)</p>
+                <p class="subEnunciat">Donat un número sencer, desenvolupar la seva taula de multiplicar (del 0 fins al
+                    10)</p>
+                <ul class="explicacio">
+                    <li>Els resultats s'han de mostrar dins un table HTML.</li>
+                    <li>Heu de mostrar 3 columnes: una pel número que ha introduit l'usuari (multiplicant), un altre pel
+                        multiplicador (del 0 al 10), i una tercera pel resultat.</li>
+                    <li>Heu d'avisar a l'usuari si no ha escrit cap valor a l'input.</li>
+                    <li>El botó "Neteja" esborra la taula</li>
+                </ul>
+                <p class="exercici">
+                <p>
+                    <input type="number" id="multiplicando" name="multiplicando" min="0" max="999" class="numPeque">
+                </p>
+
+                <p>
+                    <button id="btnTaulaMulti" class="">Mostra Taula</button>
+                    <button id="netejaEx1" class="">Neteja</button>
+                </p>
+
+                <p>
+                    Resultat:
+                </p>
+                <table id="taulaMulti"></table>
+            </li>
+
+            <li>
+                <p class="enunciat">Generació de colors CSS aleatoris (40 punts)</p>
+                <ul class="explicacio">
+                    <li>Heu de fer una funció de generació ràpida de colors rgb aleatoris i mostrar-los a la capsa</li>
+                    <li>La generació comença quan es pitja "Start" i s'atura quan es pitja "Stop"</li>
+                    <li>El botó Start és el mateix que el de Stop. Heu de controlar que quan es pitja, ha de canviar el
+                        seu texte i el seu color.</li>
+                    <li>Quan la generació s'atura a un color, aquest s'ha de posar com a fons del main#principal</li>
+                    <li>El botó reinicia atura la generació i lleva el color de fons.</li>
+                </ul>
+                <p class="exercici">
+                    <button id="btnStartStop" class="">Start</button>
+                    <button id="netejaEx2" class="">Reinicia</button>
+                    <br>
+                    <label id="colorAleatori" class="mt-3"></label>
+                </p>
+            </li>
+
+            <li>
+                <p class="enunciat">Emplenar un Array, ordenat i sense repeticions (20 punts)</p>
+                <p class="subEnunciat">L'usuari afegeix elements numèrics a un array i aquest es mostra per pantalla
+                    ordenat i sense repeticions</p>
+                <ul class="explicacio">
+                    <li>Heu d'afegir els elements escrits a l'input de tipus numèric.</li>
+                    <li>Cada vegada que s'afegeix un número, si no està repetit, heu d'actualitzar l'array, ordenar-lo i
+                        mostrar-lo al resultat</li>
+                    <li>Si no s'ha escrit cap número o si el número està repetit, no s'ha de fer res, ni tan sols avisar l'usuari</li>
+                    <li>El botó "Neteja" esborra el contingut del Array.</li>
+                </ul>
+                <p class="exercici">
+
+                    <input type="number" name="numero" id="numero" min="-999" max="999" class="numPeque">
+                    <button class="" id="btnAfegir">+</button>
+
+                    <button id="netejaEx3" class="">Neteja</button>
+                    <br>
+                    Resultat: <span id="resultatArray"></span>
+
+                </p>
+            </li>
+        </ol>
+    </main>
+
+    <footer>
+        &copy; Daniel Martínez
+    </footer>
+
+
+</body>
+
+</html>

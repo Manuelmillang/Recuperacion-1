@@ -1,0 +1,57 @@
+.enunciat {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.subEnunciat {
+    font-size: large;
+}
+
+.explicacio li {
+    font-style: italic;
+    font-weight: normal;
+    font-size: small;
+}
+
+.exercici {
+    font-weight: normal;
+    font-size: medium;
+}
+
+input:not([disabled]) {
+    background-color: beige;
+}
+
+.numPeque {
+    width: 70px;
+}
+
+#colorAleatori{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px 0;
+    font-size: xx-large;
+}
+
+/* Estilos para la tabla*/
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #c6c6c6;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
