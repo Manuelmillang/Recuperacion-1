@@ -24,24 +24,44 @@ netejaEx3.onclick = netejaArray;
 
 /* Exercici 1*/
 function generaTabla() {
+    var number = parseInt(multiplicando.value);
+    if (isNaN(number)) {
+        alert('Por favor ingresa un número válido.');
+        return;
+    }
 
+    var tableHtml = '<table>';
+    tableHtml += '<tr><th>Multiplicando</th><th>Multiplicador</th><th>Resultado</th></tr>';
+
+    for (var i = 0; i <= 10; i++) {
+        var result = number * i;
+
+        tableHtml += '<tr>';
+        tableHtml += '<td>' + number + '</td><td>' + i + '</td><td>' + result + '</td>';
+        tableHtml += '</tr>';
+    }
+
+    tableHtml += '</table>';
+
+    taulaMulti.innerHTML = tableHtml;
 }
 
 function netejaEx1() {
-    
+    taulaMulti.innerHTML = '';
+
 }
 
 
 /* Exercici 2*/
 let intervalo;
-function startStopGame(){
-  
+function startStopGame() {
+
 }
 
 let color = "";
 
 function startAleatori() {
- 
+
 }
 
 function stopAleatori() {
@@ -55,11 +75,12 @@ function netejaEx2() {
 
 /* Exercici 3*/
 let array = [];
+let
 
 function afegeixElementArray() {
-   
+
 }
 
 function netejaArray() {
-  
+
 }
