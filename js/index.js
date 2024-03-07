@@ -54,33 +54,73 @@ function netejaEx1() {
 
 /* Exercici 2*/
 let intervalo;
+let funcionando = false;
+let rgbColor;
+
 function startStopGame() {
-
+    if (!funcionando) {
+        btnStartStop.textContent = "Stop";
+        btnStartStop.className = "btn btn-danger";
+        intervalo = setInterval(startAleatori, 100);
+    } else {
+        btnStartStop.textContent = "Start";
+        btnStartStop.className = "btn btn-success";
+        clearInterval(intervalo);
+        stopAleatori()
+    }
+    funcionando = !funcionando;
 }
-
 let color = "";
-
 function startAleatori() {
-
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    rgbColor = `rgb(${r}, ${g}, ${b})`;
+    colorAleatori.style.backgroundColor = rgbColor;
 }
 
 function stopAleatori() {
+    clearInterval(intervalo);
+    const button = document.getElementById("btnStartStop");
+    button.textContent = "Start";
+    button.style.backgroundColor = "green";
+    const principal = document.getElementById("principal");
+    funcionando = false;
+    principal.style.backgroundColor = rgbColor;
 
 }
 
 function netejaEx2() {
-
+    clearInterval(intervalo);
+    btnStartStop.textContent = "Start";
+    btnStartStop.className = "btn btn-success";
+    principal.style.backgroundColor = "";
+    colorAleatori.textContent = "";
+    colorAleatori.style.backgroundColor = "";
+    isGenerating = false;
 }
 
 
 /* Exercici 3*/
 let array = [];
-let
 
 function afegeixElementArray() {
-
+    const numeroValue = parseInt(numero.value);
+    if (isNaN(numeroValue) || numeroValue < -999 || numeroValue > 999) {
+        return;
+    }
+    if (!array.includes(numeroValue)) {
+        array.push(numeroValue);
+        array.sort((a, b) => a - b);
+        mostrarArray();
+    }
 }
 
 function netejaArray() {
+    array = [];
+    mostrarArray();
+}
 
+function mostrarArray() {
+    resultatArray.textContent = array.join(',');
 }
